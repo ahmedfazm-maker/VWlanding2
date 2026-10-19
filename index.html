@@ -133,7 +133,7 @@ body.hov #cur-r{width:56px;height:56px;border-color:var(--teal)}
 .c-dark{background:var(--ink3);border:1px solid var(--line);padding:28px 26px;border-radius:2px}
 .c-dark .lbl,.lbl{font-family:"Chakra Petch",sans-serif;font-weight:400;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:12px}
 .lines2{display:grid;gap:8px;margin-top:4px}
-.lines2 div{display:flex;align-items:center;gap:10px;font-family:"Chakra Petch",sans-serif;font-weight:500;font-size:13px;color:var(--mint)}
+.lines2 div{display:flex;width:100%;align-items:center;gap:10px;font-family:"Chakra Petch",sans-serif;font-weight:500;font-size:13px;color:var(--mint)}
 .lines2 b{font-size:8.5px;letter-spacing:.14em;padding:3px 8px;border-radius:100px;background:rgba(41,190,156,.1);border:1px solid rgba(41,190,156,.25);color:var(--teal);font-weight:600}
 .c-note{background:#1C2E24;border:1px solid rgba(41,190,156,.16);border-top:3px solid var(--teal);padding:24px 22px;border-radius:0 0 2px 2px}
 .c-note .ni{font-family:"Chakra Petch",sans-serif;font-weight:700;font-size:38px;color:var(--teal);opacity:.2;line-height:1;display:block;margin-bottom:6px}
@@ -167,7 +167,7 @@ body.hov #cur-r{width:56px;height:56px;border-color:var(--teal)}
 /* approach */
 .switch{display:inline-flex;gap:10px;margin-bottom:46px;flex-wrap:wrap}
 .bots{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
-.bots::before{content:"";position:absolute;left:4%;right:4%;top:50%;height:1px;background:linear-gradient(90deg,transparent,rgba(41,190,156,.35),transparent);z-index:0}
+
 .bcard{position:relative;background:var(--ink2);border:1px solid rgba(41,190,156,.18);border-radius:2px;padding:38px 22px 26px;box-shadow:5px 10px 30px rgba(0,0,0,.5);z-index:1;transition:opacity .5s,filter .5s,transform .4s var(--ease),box-shadow .4s}
 .bcard .num{font-family:"Chakra Petch",sans-serif;font-weight:300;font-size:52px;color:rgba(41,190,156,.12);line-height:1;position:absolute;top:10px;right:12px;letter-spacing:-.04em}
 .bcard h3{font-family:"Chakra Petch",sans-serif;font-weight:600;font-size:20px;color:var(--mint);margin:6px 0 10px}
@@ -315,12 +315,97 @@ body.hov #cur-r{width:56px;height:56px;border-color:var(--teal)}
 }
 @media (max-width:480px){.hero-acts{flex-direction:column;align-items:stretch}.btn-p,.btn-g{justify-content:center}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;translate:none}}
+/* logo spotlight background */
+.spot{position:fixed;inset:0;z-index:1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22132%22%20height%3D%2264%22%20viewBox%3D%220%200%20132%2064%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23DCF1DD%22%20stroke-opacity%3D%22.5%22%20stroke-width%3D%22.55%22%3E%3Cg%20transform%3D%22translate(8%208)%20scale(.62)%22%3E%3Cpath%20d%3D%22M36.65%2C20.58c-.14%2C0-.28%2C0-.43-.01-.12%2C0-.25-.02-.37-.03-2.22-.27-4.09-1.81-4.94-3.88l-4.71-11.41c-.42-1.02-1.34-1.79-2.43-1.91-.1-.01-.19-.02-.29-.02%2C0%2C0-.02%2C0-.03%2C0-1.01%2C0-1.96.47-2.55%2C1.28l-1.79%2C2.45c-.5.68-1.44.93-2.16.5-.83-.49-1.04-1.58-.49-2.34l1.83-2.5C19.51%2C1.03%2C21.48.06%2C23.53.09c.13%2C0%2C.26%2C0%2C.39.02%2C2.34.18%2C4.35%2C1.76%2C5.24%2C3.94l4.7%2C11.38c.42%2C1.03%2C1.36%2C1.81%2C2.47%2C1.92.09%2C0%2C.19.01.28.02.93%2C0%2C1.81-.43%2C2.43-1.13l2.46-2.76c.56-.63%2C1.52-.78%2C2.2-.29.78.57.88%2C1.67.26%2C2.38l-2.58%2C2.9c-1.22%2C1.37-2.92%2C2.13-4.74%2C2.13Z%22%2F%3E%3Cpath%20d%3D%22M20.49%2C20.58c-.14%2C0-.28%2C0-.43-.01-.12%2C0-.25-.02-.37-.03-2.22-.27-4.09-1.81-4.94-3.88l-4.71-11.41c-.42-1.02-1.34-1.79-2.43-1.91-.1-.01-.19-.02-.29-.02%2C0%2C0-.02%2C0-.03%2C0-1.01%2C0-1.96.47-2.55%2C1.28l-1.79%2C2.45c-.5.68-1.44.93-2.16.5-.83-.49-1.04-1.58-.49-2.34l1.83-2.5C3.35%2C1.03%2C5.33.06%2C7.38.09c.13%2C0%2C.26%2C0%2C.39.02%2C2.34.18%2C4.35%2C1.76%2C5.24%2C3.94l4.7%2C11.38c.42%2C1.03%2C1.36%2C1.81%2C2.47%2C1.92.09%2C0%2C.19.01.28.02.93%2C0%2C1.81-.43%2C2.43-1.13l2.46-2.76c.56-.63%2C1.52-.78%2C2.2-.29.78.57.88%2C1.67.26%2C2.38l-2.58%2C2.9c-1.22%2C1.37-2.92%2C2.13-4.74%2C2.13Z%22%2F%3E%3Cpath%20d%3D%22M50.16%2C15.45c.39.94%2C1.2%2C1.68%2C2.2%2C1.86.18.03.36.05.54.05.93%2C0%2C1.81-.43%2C2.43-1.13l2.47-2.78%2C1.42-1.79s.02-.03.04-.04c2.28-2.68%2C2.42-5.23.39-7.02-1.73-1.52-4.73-2.01-6.29-.29-.02.03-.04.06-.07.09l-1.8%2C2.47c-.5.68-1.44.93-2.16.5-.83-.49-1.04-1.58-.49-2.34l1.83-2.5c.08-.11.17-.24.3-.37%2C2.85-3.15%2C7.89-2.53%2C10.81.03%2C2.57%2C2.26%2C4.1%2C6.62-.04%2C11.51l-1.43%2C1.81-.06.07-2.58%2C2.9c-1.22%2C1.37-2.92%2C2.13-4.74%2C2.13-.14%2C0-.28%2C0-.43-.01-.12%2C0-.25-.02-.37-.03-2.22-.27-4.09-1.81-4.94-3.87-1.12-2.72-3.94-9.54-4.76-11.54-.26-.62-.7-1.16-1.3-1.47-.42-.21-.88-.33-1.37-.34-1.03-.03-1.97.45-2.58%2C1.28l-1.79%2C2.45c-.5.68-1.44.93-2.16.5-.83-.49-1.04-1.58-.49-2.34l1.74-2.39c.91-1.25%2C2.21-2.18%2C3.71-2.54.67-.16%2C1.34-.21%2C2-.16%2C2.34.18%2C4.35%2C1.76%2C5.25%2C3.94l4.71%2C11.4Z%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate(74%2040)%20scale(.62)%22%3E%3Cpath%20d%3D%22M36.65%2C20.58c-.14%2C0-.28%2C0-.43-.01-.12%2C0-.25-.02-.37-.03-2.22-.27-4.09-1.81-4.94-3.88l-4.71-11.41c-.42-1.02-1.34-1.79-2.43-1.91-.1-.01-.19-.02-.29-.02%2C0%2C0-.02%2C0-.03%2C0-1.01%2C0-1.96.47-2.55%2C1.28l-1.79%2C2.45c-.5.68-1.44.93-2.16.5-.83-.49-1.04-1.58-.49-2.34l1.83-2.5C19.51%2C1.03%2C21.48.06%2C23.53.09c.13%2C0%2C.26%2C0%2C.39.02%2C2.34.18%2C4.35%2C1.76%2C5.24%2C3.94l4.7%2C11.38c.42%2C1.03%2C1.36%2C1.81%2C2.47%2C1.92.09%2C0%2C.19.01.28.02.93%2C0%2C1.81-.43%2C2.43-1.13l2.46-2.76c.56-.63%2C1.52-.78%2C2.2-.29.78.57.88%2C1.67.26%2C2.38l-2.58%2C2.9c-1.22%2C1.37-2.92%2C2.13-4.74%2C2.13Z%22%2F%3E%3Cpath%20d%3D%22M20.49%2C20.58c-.14%2C0-.28%2C0-.43-.01-.12%2C0-.25-.02-.37-.03-2.22-.27-4.09-1.81-4.94-3.88l-4.71-11.41c-.42-1.02-1.34-1.79-2.43-1.91-.1-.01-.19-.02-.29-.02%2C0%2C0-.02%2C0-.03%2C0-1.01%2C0-1.96.47-2.55%2C1.28l-1.79%2C2.45c-.5.68-1.44.93-2.16.5-.83-.49-1.04-1.58-.49-2.34l1.83-2.5C3.35%2C1.03%2C5.33.06%2C7.38.09c.13%2C0%2C.26%2C0%2C.39.02%2C2.34.18%2C4.35%2C1.76%2C5.24%2C3.94l4.7%2C11.38c.42%2C1.03%2C1.36%2C1.81%2C2.47%2C1.92.09%2C0%2C.19.01.28.02.93%2C0%2C1.81-.43%2C2.43-1.13l2.46-2.76c.56-.63%2C1.52-.78%2C2.2-.29.78.57.88%2C1.67.26%2C2.38l-2.58%2C2.9c-1.22%2C1.37-2.92%2C2.13-4.74%2C2.13Z%22%2F%3E%3Cpath%20d%3D%22M50.16%2C15.45c.39.94%2C1.2%2C1.68%2C2.2%2C1.86.18.03.36.05.54.05.93%2C0%2C1.81-.43%2C2.43-1.13l2.47-2.78%2C1.42-1.79s.02-.03.04-.04c2.28-2.68%2C2.42-5.23.39-7.02-1.73-1.52-4.73-2.01-6.29-.29-.02.03-.04.06-.07.09l-1.8%2C2.47c-.5.68-1.44.93-2.16.5-.83-.49-1.04-1.58-.49-2.34l1.83-2.5c.08-.11.17-.24.3-.37%2C2.85-3.15%2C7.89-2.53%2C10.81.03%2C2.57%2C2.26%2C4.1%2C6.62-.04%2C11.51l-1.43%2C1.81-.06.07-2.58%2C2.9c-1.22%2C1.37-2.92%2C2.13-4.74%2C2.13-.14%2C0-.28%2C0-.43-.01-.12%2C0-.25-.02-.37-.03-2.22-.27-4.09-1.81-4.94-3.87-1.12-2.72-3.94-9.54-4.76-11.54-.26-.62-.7-1.16-1.3-1.47-.42-.21-.88-.33-1.37-.34-1.03-.03-1.97.45-2.58%2C1.28l-1.79%2C2.45c-.5.68-1.44.93-2.16.5-.83-.49-1.04-1.58-.49-2.34l1.74-2.39c.91-1.25%2C2.21-2.18%2C3.71-2.54.67-.16%2C1.34-.21%2C2-.16%2C2.34.18%2C4.35%2C1.76%2C5.25%2C3.94l4.71%2C11.4Z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-size:132px 64px;opacity:0;transition:opacity .8s;
+  -webkit-mask-image:radial-gradient(var(--sr,250px) circle at var(--mx,50%) var(--my,50%),#000 0%,transparent 70%);mask-image:radial-gradient(var(--sr,250px) circle at var(--mx,50%) var(--my,50%),#000 0%,transparent 70%)}
+.spot.on{opacity:1}
+@media (pointer:coarse),(max-width:768px){.spot.on{opacity:.4}}
+/* top progress */
+.pbar{position:fixed;left:0;top:0;height:2px;width:100%;z-index:5001;background:linear-gradient(90deg,var(--teal-deep),var(--teal));transform-origin:left;transform:scaleX(0);box-shadow:0 0 10px rgba(41,190,156,.6)}
+/* giant section index (parallax) */
+.bgnum{position:absolute;right:3vw;top:60px;font-family:"Chakra Petch",sans-serif;font-weight:700;font-size:clamp(140px,22vw,340px);line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(41,190,156,.08);pointer-events:none;z-index:0;user-select:none;will-change:transform}
+/* interactive card glow */
+@property --ga{syntax:'<number>';inherits:false;initial-value:0}
+.gl{background-image:radial-gradient(320px circle at var(--cx,50%) var(--cy,0%),rgba(41,190,156,var(--ga)),transparent 70%);transition:--ga .45s,transform .4s var(--ease),box-shadow .4s,opacity .7s,filter .5s,translate .9s cubic-bezier(.34,1.45,.64,1),rotate .9s cubic-bezier(.34,1.45,.64,1),scale .9s cubic-bezier(.34,1.45,.64,1)}
+.gl:hover,.gl.touch{--ga:.15}
+/* word reveal */
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
+.w>span{display:inline-block;transform:translateY(105%) rotate(4deg);transform-origin:left bottom;opacity:0;transition:transform .9s var(--ease),opacity .9s;transition-delay:calc(var(--i)*45ms)}
+.done .w>span{transform:none;opacity:1}
+.fill .wd{color:rgba(220,241,221,.16);transition:color .35s}
+.fill .wd.on{color:var(--mint)}
+.fill em .wd.on{color:var(--teal)}
+/* pin-drop reveal for cards */
+.reveal.drop{translate:0 -40px;rotate:-3deg;scale:1.04;transition:opacity .7s ease,translate .9s cubic-bezier(.34,1.45,.64,1),rotate .9s cubic-bezier(.34,1.45,.64,1),scale .9s cubic-bezier(.34,1.45,.64,1),--ga .45s,box-shadow .4s,transform .4s var(--ease)}
+.reveal.drop.alt{rotate:3deg}
+.reveal.drop.done{translate:0 0;rotate:0deg;scale:1}
+/* hero two-lines diagram */
+.lines-svg{width:100%;height:auto;display:block;margin:4px 0 12px;overflow:visible}
+.lines-svg .base{fill:none;stroke-width:1.6;opacity:.28}
+.lines-svg .flow{fill:none;stroke-width:2.2;stroke-linecap:round;stroke-dasharray:18 282;animation:flow 3.4s linear infinite}
+.lines-svg .flow.b{animation-duration:4.2s;animation-delay:-1.4s}
+@keyframes flow{to{stroke-dashoffset:-300}}
+.lines-svg .sd.a{fill:#29BE9C}.lines-svg .sd.b{fill:#DCF1DD}
+.lines-svg .sd{stroke:#0F2520;stroke-width:1.5;animation:tw 2.8s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes tw{0%,100%{opacity:.55}50%{opacity:1}}
+.lines-svg .hub{fill:#29BE9C}
+.lines-svg .ring{fill:none;stroke:#29BE9C;stroke-width:.8;transform-box:fill-box;transform-origin:center;animation:ringp 2.6s ease-out infinite}
+.lines-svg .ring.r2{animation-delay:1.3s}
+@keyframes ringp{from{transform:scale(1);opacity:.7}to{transform:scale(3.2);opacity:0}}
+.lines-svg text{font-family:"Chakra Petch",sans-serif;font-size:7px;letter-spacing:.12em;fill:rgba(220,241,221,.55);text-transform:uppercase}
+.lines-svg .lb{font-weight:700;font-size:8.5px;text-transform:none;letter-spacing:.08em}
+.lines-svg .grp-a,.lines-svg .grp-b{transition:opacity .3s}
+.lines-svg.hl-a .grp-b,.lines-svg.hl-b .grp-a{opacity:.15}
+.lines2 div{cursor:none;padding:4px 0;transition:color .25s}
+.lines2 div:hover{color:var(--teal)}
+.lines2 small{margin-left:auto;font-family:"Chakra Petch",sans-serif;font-size:8.5px;letter-spacing:.14em;color:var(--dimmer);text-transform:uppercase}
+/* network diagram animation */
+.netsvg .sp{stroke-dasharray:2 3;animation:flow 6s linear infinite}
+.netsvg .nd{animation:tw 3.2s ease-in-out infinite;animation-delay:var(--d)}
+.netsvg .core{transform-box:fill-box;transform-origin:center;animation:ringp 3s ease-out infinite}
+.netsvg .orbit{transform-origin:150px 70px;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* approach: interactive steps */
+.track-line{position:relative;height:2px;background:rgba(41,190,156,.12);margin:0 0 34px}
+.track-line i{position:absolute;inset:0;background:linear-gradient(90deg,var(--teal-deep),var(--teal));transform-origin:left;transform:scaleX(var(--tp,0));box-shadow:0 0 10px rgba(41,190,156,.5)}
+.track-line b{position:absolute;top:50%;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:var(--ink);border:2px solid rgba(41,190,156,.35);transition:background .4s,border-color .4s,box-shadow .4s}
+.track-line b.on{background:var(--teal);border-color:var(--teal);box-shadow:0 0 12px var(--teal)}
+.bcard{cursor:none}
+.bcard.act{border-color:rgba(41,190,156,.6);box-shadow:0 0 0 1px rgba(41,190,156,.35),8px 16px 40px rgba(0,0,0,.6);--ga:.1}
+.bcard.act .num{color:rgba(41,190,156,.4)}
+.bcard .more{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-family:"Chakra Petch",sans-serif;font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--dimmer);transition:color .3s}
+.bcard.act .more,.bcard:hover .more{color:var(--teal)}
+.bdetail{position:relative;margin-top:30px;display:grid;grid-template-columns:1fr 1.3fr .9fr;gap:30px;align-items:start;background-color:var(--ink3);border:1px solid var(--line);padding:30px 28px;border-radius:2px}
+.bdetail .bd-h{font-family:"Chakra Petch",sans-serif;font-weight:500;font-size:clamp(20px,2vw,26px);line-height:1.15}
+.bdetail ul{list-style:none;display:grid;gap:10px}
+.bdetail li{display:flex;gap:10px;font-size:14px;line-height:1.5;color:var(--dim);opacity:0;transform:translateX(-8px);animation:li .5s var(--ease) forwards;animation-delay:calc(var(--i)*90ms)}
+.bdetail li::before{content:"";flex:none;width:7px;height:7px;margin-top:7px;background:var(--teal);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+@keyframes li{to{opacity:1;transform:none}}
+.bdetail .bd-o small{display:block;font-family:"Chakra Petch",sans-serif;font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.bdetail .bd-o span{font-family:"Chakra Petch",sans-serif;font-weight:500;font-size:16px;line-height:1.35;color:var(--mint)}
+.bdetail .bd-in{transition:opacity .25s}
+.adv .bdetail{border-color:rgba(224,112,112,.25)}
+.adv .bdetail li::before{background:#E07070}
+.adv .bdetail .bd-o small{color:#E07070}
+.adv .track-line i{background:linear-gradient(90deg,#6b3b3b,#E07070);box-shadow:none}
+.adv .track-line b.on{background:#E07070;border-color:#E07070;box-shadow:none}
+/* footer icons */
+.foot-social a.ico{width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);color:var(--mint);clip-path:polygon(7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%,0 7px);transition:background .25s,color .25s,border-color .25s,transform .25s}
+.foot-social a.ico svg{width:17px;height:17px}
+.foot-social a.ico:hover{background:var(--teal);color:var(--ink);border-color:var(--teal);transform:translateY(-2px)}
+@media (max-width:1024px){.bdetail{grid-template-columns:1fr;gap:18px}}
+@media (max-width:768px){.bots .bdetail{margin-top:-10px}}
+@media (max-width:768px){.bgnum{font-size:120px;top:40px;right:-4px}.track-line{display:none}.reveal.drop{rotate:-1.5deg;translate:0 -20px}.reveal.drop.alt{rotate:1.5deg}}
+@media (prefers-reduced-motion:reduce){.w>span{transform:none;opacity:1}.reveal.drop{translate:none;rotate:none;scale:none}}
+
 .l1{fill:#29be9c}.l2{fill:#02686f}.l3{fill:#dcf1dd}
 </style>
 </head>
 <body>
 <div id="cur"></div><div id="cur-r"></div>
 <div id="bg-glow"></div>
+<div class="spot" id="spot"></div>
+<div class="pbar" id="pbar"></div>
 
 <!-- PRELOADER -->
 <div id="pre">
@@ -353,7 +438,7 @@ body.hov #cur-r{width:56px;height:56px;border-color:var(--teal)}
 <!-- ═══ 1 · OPENING ═══ -->
 <section class="wall-section" id="s-opening">
   <div class="opening-layout">
-    <div class="card hero-card card-shadow reveal">
+    <div class="card hero-card gl card-shadow reveal">
       <div class="pin left"></div><div class="pin right"></div>
       <div class="hero-ey">MENA Venture Innovation Services</div>
       <div class="hero-title">Weaving<br>the <span class="ac">DNA</span><br>of <span class="ot">Innovation</span></div>
@@ -364,13 +449,23 @@ body.hov #cur-r{width:56px;height:56px;border-color:var(--teal)}
       </div>
     </div>
     <div class="side-stack">
-      <div class="card c-dark card-shadow reveal">
+      <div class="card c-dark gl card-shadow reveal">
         <div class="tape left"></div>
-        <span class="lbl">Two Service Lines</span>
-        <svg viewBox="0 0 230 130" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;margin:8px 0 14px"><line x1="-20" y1="0" x2="200" y2="130" stroke="#29BE9C" stroke-width="0.5" opacity="0.10"/><line x1="10" y1="0" x2="230" y2="130" stroke="#29BE9C" stroke-width="0.5" opacity="0.15"/><line x1="40" y1="0" x2="260" y2="130" stroke="#29BE9C" stroke-width="0.5" opacity="0.20"/><line x1="70" y1="0" x2="290" y2="130" stroke="#29BE9C" stroke-width="0.5" opacity="0.25"/><line x1="100" y1="0" x2="320" y2="130" stroke="#02686F" stroke-width="0.9" opacity="0.30"/><line x1="130" y1="0" x2="350" y2="130" stroke="#29BE9C" stroke-width="0.5" opacity="0.25"/><line x1="160" y1="0" x2="380" y2="130" stroke="#29BE9C" stroke-width="0.5" opacity="0.20"/><line x1="190" y1="0" x2="410" y2="130" stroke="#29BE9C" stroke-width="0.5" opacity="0.15"/><line x1="220" y1="0" x2="440" y2="130" stroke="#29BE9C" stroke-width="0.5" opacity="0.10"/><line x1="-20" y1="130" x2="200" y2="0" stroke="#29BE9C" stroke-width="0.5" opacity="0.10"/><line x1="10" y1="130" x2="230" y2="0" stroke="#29BE9C" stroke-width="0.5" opacity="0.15"/><line x1="40" y1="130" x2="260" y2="0" stroke="#29BE9C" stroke-width="0.5" opacity="0.20"/><line x1="70" y1="130" x2="290" y2="0" stroke="#29BE9C" stroke-width="0.5" opacity="0.25"/><line x1="100" y1="130" x2="320" y2="0" stroke="#02686F" stroke-width="0.9" opacity="0.30"/><line x1="130" y1="130" x2="350" y2="0" stroke="#29BE9C" stroke-width="0.5" opacity="0.25"/><line x1="160" y1="130" x2="380" y2="0" stroke="#29BE9C" stroke-width="0.5" opacity="0.20"/><line x1="190" y1="130" x2="410" y2="0" stroke="#29BE9C" stroke-width="0.5" opacity="0.15"/><line x1="220" y1="130" x2="440" y2="0" stroke="#29BE9C" stroke-width="0.5" opacity="0.10"/><circle cx="115" cy="65" r="3.5" fill="#29BE9C" opacity=".9"/><circle cx="115" cy="65" r="9" stroke="#29BE9C" stroke-width=".6" opacity=".2"/><circle cx="115" cy="65" r="16" stroke="#02686F" stroke-width=".5" opacity=".18"/><circle cx="85" cy="47" r="2.2" fill="#29BE9C" opacity=".6"/><circle cx="145" cy="47" r="2.2" fill="#02686F" opacity=".6"/><circle cx="85" cy="83" r="2.2" fill="#29BE9C" opacity=".6"/><circle cx="145" cy="83" r="2.2" fill="#02686F" opacity=".6"/><circle cx="100" cy="56" r="1.6" fill="#29BE9C" opacity=".6"/><circle cx="130" cy="74" r="1.6" fill="#02686F" opacity=".6"/></svg>
-        <div class="lines2"><div><b>VaaS</b>Venture-as-a-Service</div><div><b>TVS</b>The Venture School</div></div>
+        <span class="lbl">Two Service Lines · One Ecosystem</span>
+        <svg class="lines-svg" id="linesSvg" viewBox="0 0 240 150" aria-hidden="true">
+          <g class="grp-a"><text class="lb" x="2" y="30" style="fill:#29BE9C">VaaS</text>
+            <path id="pA" class="base" stroke="#29BE9C" d="M4,40 C60,40 78,112 122,100 S186,58 214,75"/>
+            <path class="flow" stroke="#7FF0D2" pathLength="300" d="M4,40 C60,40 78,112 122,100 S186,58 214,75"/></g>
+          <g class="grp-b"><text class="lb" x="2" y="128" style="fill:#DCF1DD">TVS</text>
+            <path id="pB" class="base" stroke="#DCF1DD" d="M4,112 C60,112 78,40 122,52 S186,92 214,75"/>
+            <path class="flow b" stroke="#DCF1DD" pathLength="300" d="M4,112 C60,112 78,40 122,52 S186,92 214,75"/></g>
+          <circle class="ring" cx="214" cy="75" r="6"/><circle class="ring r2" cx="214" cy="75" r="6"/>
+          <circle class="hub" cx="214" cy="75" r="5.5"/>
+          <text x="214" y="98" text-anchor="middle">Ecosystem</text>
+        </svg>
+        <div class="lines2" id="lines2"><div data-g="a"><b>VaaS</b>Venture-as-a-Service<small>4 services</small></div><div data-g="b"><b>TVS</b>The Venture School<small>2 services</small></div></div>
       </div>
-      <div class="card c-note card-shadow reveal">
+      <div class="card c-note gl card-shadow reveal">
         <div class="pin center"></div>
         <span class="ni">→</span>
         <h4>We don't consult and leave. <em>We build together.</em></h4>
@@ -383,17 +478,18 @@ body.hov #cur-r{width:56px;height:56px;border-color:var(--teal)}
 
 <!-- ═══ 2 · ABOUT ═══ -->
 <section class="wall-section" id="s-about">
+  <div class="bgnum" aria-hidden="true">01</div>
   <div class="inner">
     <div class="s-label reveal">About Us</div>
-    <h2 class="about-big reveal">A venture innovation services company providing <em>hands-on support</em> to every stakeholder of MENA's <em>venture ecosystem</em>.</h2>
+    <h2 class="about-big fill reveal">A venture innovation services company providing <em>hands-on support</em> to every stakeholder of MENA's <em>venture ecosystem</em>.</h2>
     <div class="community-layout">
       <div>
-        <div class="c-manifesto drift reveal">
+        <div class="c-manifesto gl drift reveal">
           <div class="pin left"></div>
           <p><strong>Hands-on, not hands-off.</strong> We work as a companion to the people we serve: we partner, integrate, and build with you. Every engagement is measured by what it produces, not by hours of advice.</p>
           <p>We work with every side of the ecosystem, portfolio owners, investors, founders, studios, enablers, and corporates, and help them <strong>grow together</strong>.</p>
         </div>
-        <div class="c-manifesto drift reveal">
+        <div class="c-manifesto gl drift reveal">
           <div class="tape right"></div>
           <span class="lbl">Our Mission</span>
           <p class="mis">To strengthen MENA's venture ecosystem by building the <em>infrastructure, leadership, and knowledge</em> its stakeholders need to grow together.</p>
@@ -401,14 +497,14 @@ body.hov #cur-r{width:56px;height:56px;border-color:var(--teal)}
       </div>
       <div>
         <div class="community-stat-grid">
-          <div class="c-stat drift reveal"><div class="pin left"></div><span class="c-stat-n">2</span><span class="c-stat-l">Service Lines</span></div>
-          <div class="c-stat drift reveal"><div class="tape right"></div><span class="c-stat-n">5</span><span class="c-stat-l">Stakeholder Groups</span></div>
-          <div class="c-stat drift reveal"><div class="tape left"></div><span class="c-stat-n">MENA</span><span class="c-stat-l">Region Focus</span></div>
-          <div class="c-stat drift reveal"><div class="pin right"></div><span class="c-stat-n">∞</span><span class="c-stat-l">Network Access</span></div>
+          <div class="c-stat gl drift reveal"><div class="pin left"></div><span class="c-stat-n" data-count="2">2</span><span class="c-stat-l">Service Lines</span></div>
+          <div class="c-stat gl drift reveal"><div class="tape right"></div><span class="c-stat-n" data-count="5">5</span><span class="c-stat-l">Stakeholder Groups</span></div>
+          <div class="c-stat gl drift reveal"><div class="tape left"></div><span class="c-stat-n">MENA</span><span class="c-stat-l">Region Focus</span></div>
+          <div class="c-stat gl drift reveal"><div class="pin right"></div><span class="c-stat-n">∞</span><span class="c-stat-l">Network Access</span></div>
         </div>
-        <div class="illus-card card-shadow reveal">
+        <div class="illus-card gl card-shadow reveal">
           <span class="lbl">Multiple Service Models</span>
-          <svg viewBox="0 0 300 140" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="150" cy="70" rx="114" ry="62" stroke="#29BE9C" stroke-width=".5" opacity="0.05"/><ellipse cx="150" cy="70" rx="80" ry="44" stroke="#29BE9C" stroke-width=".5" opacity="0.08"/><ellipse cx="150" cy="70" rx="44" ry="26" stroke="#29BE9C" stroke-width=".5" opacity="0.12"/><line x1="150" y1="70" x2="194.0" y2="70.0" stroke="#29BE9C" stroke-width=".6" opacity=".25"/><line x1="150" y1="70" x2="181.1" y2="88.4" stroke="#29BE9C" stroke-width=".6" opacity=".25"/><line x1="150" y1="70" x2="150.0" y2="96.0" stroke="#29BE9C" stroke-width=".6" opacity=".25"/><line x1="150" y1="70" x2="118.9" y2="88.4" stroke="#29BE9C" stroke-width=".6" opacity=".25"/><line x1="150" y1="70" x2="106.0" y2="70.0" stroke="#29BE9C" stroke-width=".6" opacity=".25"/><line x1="150" y1="70" x2="118.9" y2="51.6" stroke="#29BE9C" stroke-width=".6" opacity=".25"/><line x1="150" y1="70" x2="150.0" y2="44.0" stroke="#29BE9C" stroke-width=".6" opacity=".25"/><line x1="150" y1="70" x2="181.1" y2="51.6" stroke="#29BE9C" stroke-width=".6" opacity=".25"/><line x1="194.0" y1="70.0" x2="230.0" y2="70.0" stroke="#29BE9C" stroke-width=".5" opacity=".15"/><circle cx="230.0" cy="70.0" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="181.1" y1="88.4" x2="219.3" y2="92.0" stroke="#29BE9C" stroke-width=".5" opacity=".15"/><circle cx="219.3" cy="92.0" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="181.1" y1="88.4" x2="190.0" y2="108.1" stroke="#29BE9C" stroke-width=".5" opacity=".15"/><circle cx="190.0" cy="108.1" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="150.0" y1="96.0" x2="150.0" y2="114.0" stroke="#29BE9C" stroke-width=".5" opacity=".15"/><circle cx="150.0" cy="114.0" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="118.9" y1="88.4" x2="110.0" y2="108.1" stroke="#29BE9C" stroke-width=".5" opacity=".15"/><circle cx="110.0" cy="108.1" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="118.9" y1="88.4" x2="80.7" y2="92.0" stroke="#29BE9C" stroke-width=".5" opacity=".15"/><circle cx="80.7" cy="92.0" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="106.0" y1="70.0" x2="70.0" y2="70.0" stroke="#29BE9C" stroke-width=".5" opacity=".15"/><circle cx="70.0" cy="70.0" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="118.9" y1="51.6" x2="80.7" y2="48.0" stroke="#29BE9C" stroke-width=".5" opacity=".15"/><circle cx="80.7" cy="48.0" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="118.9" y1="51.6" x2="110.0" y2="31.9" stroke="#29BE9C" stroke-width=".5" opacity=".15"/><circle cx="110.0" cy="31.9" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="150.0" y1="44.0" x2="150.0" y2="26.0" stroke="#29BE9C" stroke-width=".5" opacity=".15"/><circle cx="150.0" cy="26.0" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="181.1" y1="51.6" x2="190.0" y2="31.9" stroke="#29BE9C" stroke-width=".5" opacity=".15"/><circle cx="190.0" cy="31.9" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="181.1" y1="51.6" x2="219.3" y2="48.0" stroke="#29BE9C" stroke-width=".5" opacity=".15"/><circle cx="219.3" cy="48.0" r="1.7" fill="#29BE9C" opacity=".4"/><circle cx="194.0" cy="70.0" r="2.2" fill="#02686F" opacity=".7"/><circle cx="181.1" cy="88.4" r="2.2" fill="#29BE9C" opacity=".7"/><circle cx="150.0" cy="96.0" r="2.2" fill="#02686F" opacity=".7"/><circle cx="118.9" cy="88.4" r="2.2" fill="#29BE9C" opacity=".7"/><circle cx="106.0" cy="70.0" r="2.2" fill="#02686F" opacity=".7"/><circle cx="118.9" cy="51.6" r="2.2" fill="#29BE9C" opacity=".7"/><circle cx="150.0" cy="44.0" r="2.2" fill="#02686F" opacity=".7"/><circle cx="181.1" cy="51.6" r="2.2" fill="#29BE9C" opacity=".7"/><circle cx="150" cy="70" r="3.5" fill="#29BE9C" opacity=".8"/><circle cx="150" cy="70" r="9" stroke="#29BE9C" stroke-width=".6" opacity=".2"/></svg>
+          <svg class="netsvg" viewBox="0 0 300 140" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="150" cy="70" rx="114" ry="62" stroke="#29BE9C" stroke-width=".5" opacity="0.05"/><ellipse cx="150" cy="70" rx="80" ry="44" stroke="#29BE9C" stroke-width=".5" opacity="0.08"/><ellipse cx="150" cy="70" rx="44" ry="26" stroke="#29BE9C" stroke-width=".5" opacity="0.12"/><line x1="150" y1="70" x2="194.0" y2="70.0" stroke="#29BE9C" stroke-width=".6" opacity=".35" class="sp"/><line x1="150" y1="70" x2="181.1" y2="88.4" stroke="#29BE9C" stroke-width=".6" opacity=".35" class="sp"/><line x1="150" y1="70" x2="150.0" y2="96.0" stroke="#29BE9C" stroke-width=".6" opacity=".35" class="sp"/><line x1="150" y1="70" x2="118.9" y2="88.4" stroke="#29BE9C" stroke-width=".6" opacity=".35" class="sp"/><line x1="150" y1="70" x2="106.0" y2="70.0" stroke="#29BE9C" stroke-width=".6" opacity=".35" class="sp"/><line x1="150" y1="70" x2="118.9" y2="51.6" stroke="#29BE9C" stroke-width=".6" opacity=".35" class="sp"/><line x1="150" y1="70" x2="150.0" y2="44.0" stroke="#29BE9C" stroke-width=".6" opacity=".35" class="sp"/><line x1="150" y1="70" x2="181.1" y2="51.6" stroke="#29BE9C" stroke-width=".6" opacity=".35" class="sp"/><line x1="194.0" y1="70.0" x2="230.0" y2="70.0" stroke="#29BE9C" stroke-width=".5" opacity=".2" class="sp"/><circle class="nd" style="--d:0.00s" cx="230.0" cy="70.0" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="181.1" y1="88.4" x2="219.3" y2="92.0" stroke="#29BE9C" stroke-width=".5" opacity=".2" class="sp"/><circle class="nd" style="--d:0.27s" cx="219.3" cy="92.0" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="181.1" y1="88.4" x2="190.0" y2="108.1" stroke="#29BE9C" stroke-width=".5" opacity=".2" class="sp"/><circle class="nd" style="--d:0.54s" cx="190.0" cy="108.1" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="150.0" y1="96.0" x2="150.0" y2="114.0" stroke="#29BE9C" stroke-width=".5" opacity=".2" class="sp"/><circle class="nd" style="--d:0.81s" cx="150.0" cy="114.0" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="118.9" y1="88.4" x2="110.0" y2="108.1" stroke="#29BE9C" stroke-width=".5" opacity=".2" class="sp"/><circle class="nd" style="--d:1.08s" cx="110.0" cy="108.1" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="118.9" y1="88.4" x2="80.7" y2="92.0" stroke="#29BE9C" stroke-width=".5" opacity=".2" class="sp"/><circle class="nd" style="--d:1.35s" cx="80.7" cy="92.0" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="106.0" y1="70.0" x2="70.0" y2="70.0" stroke="#29BE9C" stroke-width=".5" opacity=".2" class="sp"/><circle class="nd" style="--d:1.62s" cx="70.0" cy="70.0" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="118.9" y1="51.6" x2="80.7" y2="48.0" stroke="#29BE9C" stroke-width=".5" opacity=".2" class="sp"/><circle class="nd" style="--d:1.89s" cx="80.7" cy="48.0" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="118.9" y1="51.6" x2="110.0" y2="31.9" stroke="#29BE9C" stroke-width=".5" opacity=".2" class="sp"/><circle class="nd" style="--d:2.16s" cx="110.0" cy="31.9" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="150.0" y1="44.0" x2="150.0" y2="26.0" stroke="#29BE9C" stroke-width=".5" opacity=".2" class="sp"/><circle class="nd" style="--d:2.43s" cx="150.0" cy="26.0" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="181.1" y1="51.6" x2="190.0" y2="31.9" stroke="#29BE9C" stroke-width=".5" opacity=".2" class="sp"/><circle class="nd" style="--d:2.70s" cx="190.0" cy="31.9" r="1.7" fill="#29BE9C" opacity=".4"/><line x1="181.1" y1="51.6" x2="219.3" y2="48.0" stroke="#29BE9C" stroke-width=".5" opacity=".2" class="sp"/><circle class="nd" style="--d:2.97s" cx="219.3" cy="48.0" r="1.7" fill="#29BE9C" opacity=".4"/><circle cx="194.0" cy="70.0" r="2.2" class="nd" style="--d:0.00s" fill="#02686F" opacity=".7"/><circle cx="181.1" cy="88.4" r="2.2" class="nd" style="--d:0.40s" fill="#29BE9C" opacity=".7"/><circle cx="150.0" cy="96.0" r="2.2" class="nd" style="--d:0.80s" fill="#02686F" opacity=".7"/><circle cx="118.9" cy="88.4" r="2.2" class="nd" style="--d:1.20s" fill="#29BE9C" opacity=".7"/><circle cx="106.0" cy="70.0" r="2.2" class="nd" style="--d:1.60s" fill="#02686F" opacity=".7"/><circle cx="118.9" cy="51.6" r="2.2" class="nd" style="--d:2.00s" fill="#29BE9C" opacity=".7"/><circle cx="150.0" cy="44.0" r="2.2" class="nd" style="--d:2.40s" fill="#02686F" opacity=".7"/><circle cx="181.1" cy="51.6" r="2.2" class="nd" style="--d:2.80s" fill="#29BE9C" opacity=".7"/><circle cx="150" cy="70" r="3.5" fill="#29BE9C" opacity=".8"/><circle cx="150" cy="70" r="9" stroke="#29BE9C" stroke-width=".6" opacity=".2"/><circle class="core" cx="150" cy="70" r="6" stroke="#29BE9C" stroke-width=".8"/></svg>
           <div class="models"><span class="tag">Fractional leadership</span><span class="tag">Project-based builds</span><span class="tag">Practical education</span><span class="tag">Mentorship</span></div>
           <p>Matched to what each stakeholder needs, and grown as the relationship grows.</p>
         </div>
@@ -420,22 +516,29 @@ body.hov #cur-r{width:56px;height:56px;border-color:var(--teal)}
 
 <!-- ═══ 3 · APPROACH ═══ -->
 <section class="wall-section" id="s-approach">
+  <div class="bgnum" aria-hidden="true">02</div>
   <div class="inner">
     <div class="s-label reveal">Our Approach</div>
     <h2 class="ht reveal">We don't consult and leave. <em>We build together.</em></h2>
     <p class="sub reveal">Our fractional model is an ongoing relationship: a senior partner embedded in your decisions, building with your team and staying on after the handover.</p>
     <div class="switch reveal" id="switch">
-      <button class="btn-g" data-m="adv">Typical advisory</button>
       <button class="btn-g on" data-m="vw">The VentureWeavers way</button>
+      <button class="btn-g" data-m="adv">Typical advisory</button>
     </div>
+    <div class="track-line" id="tline"><i></i><b style="left:12.5%"></b><b style="left:37.5%"></b><b style="left:62.5%"></b><b style="left:87.5%"></b></div>
     <div class="bots" id="bots">
-      <div class="bcard drift reveal"><div class="pin center"></div><span class="num">01</span><div class="tx"><h3>Build</h3><p>Strategy, systems, and assets, built with your team.</p></div></div>
-      <div class="bcard drift reveal"><div class="tape center"></div><span class="num">02</span><div class="tx"><h3>Operate</h3><p>We run it with you, until it performs.</p></div></div>
-      <div class="bcard drift reveal"><div class="pin center"></div><span class="num">03</span><div class="tx"><h3>Transfer</h3><p>Documented and handed over, so the capability is yours.</p></div></div>
-      <div class="bcard drift reveal k"><div class="tape center"></div><span class="num">04</span><div class="tx"><h3>Support</h3><p>We stay on, as your needs evolve.</p></div></div>
+      <div class="bcard gl drift reveal" data-i="0"><div class="pin center"></div><span class="num">01</span><div class="tx"><h3>Build</h3><p>Strategy, systems, and assets, built with your team.</p></div><span class="more">Explore ›</span></div>
+      <div class="bcard gl drift reveal" data-i="1"><div class="tape center"></div><span class="num">02</span><div class="tx"><h3>Operate</h3><p>We run it with you, until it performs.</p></div><span class="more">Explore ›</span></div>
+      <div class="bcard gl drift reveal" data-i="2"><div class="pin center"></div><span class="num">03</span><div class="tx"><h3>Transfer</h3><p>Documented and handed over, so the capability is yours.</p></div><span class="more">Explore ›</span></div>
+      <div class="bcard gl drift reveal k" data-i="3"><div class="tape center"></div><span class="num">04</span><div class="tx"><h3>Support</h3><p>We stay on, as your needs evolve.</p></div><span class="more">Explore ›</span></div>
+    </div>
+    <div class="bdetail gl card-shadow reveal" id="bdetail"><div class="tape right"></div>
+      <div class="bd-in"><span class="lbl" id="bdLbl">Step 01</span><div class="bd-h" id="bdH"></div></div>
+      <ul class="bd-in" id="bdUl"></ul>
+      <div class="bd-in bd-o"><small id="bdOs">What you get</small><span id="bdO"></span></div>
     </div>
     <div class="endnote" id="endnote">✕ &nbsp;Engagement ends after the report. Execution is left to you.</div>
-    <div class="aaa-band c-dark card-shadow reveal">
+    <div class="aaa-band gl c-dark card-shadow reveal">
       <div class="tape left"></div>
       <h4>Fractional leadership, <em>throughout</em></h4>
       <div class="aaa"><span><b>A</b>ssess</span><span><b>A</b>dvise</span><span><b>A</b>ccess</span></div>
@@ -447,6 +550,7 @@ body.hov #cur-r{width:56px;height:56px;border-color:var(--teal)}
 
 <!-- ═══ 4 · SERVICES ═══ -->
 <section class="wall-section" id="s-services">
+  <div class="bgnum" aria-hidden="true">03</div>
   <div class="inner">
     <div class="s-label reveal">Our Services</div>
     <h2 class="ht reveal">Two service lines. <em>One hands-on venture partner.</em></h2>
@@ -454,22 +558,22 @@ body.hov #cur-r{width:56px;height:56px;border-color:var(--teal)}
 
     <div class="line-head reveal"><span class="line-badge">VaaS</span><div><h3>Venture-as-a-Service. <em>Build, operate & grow.</em></h3><p>Hands-on fractional leadership that builds, operates, and grows portfolios and ventures.</p></div></div>
     <div class="postit-wall">
-      <div class="postit-card drift reveal"><div class="pin center"></div><div class="postit-num">01</div><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"></path><circle cx="12" cy="12" r="10"></circle></svg></div>
+      <div class="postit-card gl drift reveal"><div class="pin center"></div><div class="postit-num">01</div><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"></path><circle cx="12" cy="12" r="10"></circle></svg></div>
         <h3>Fractional Leadership</h3><div class="tl">For portfolios and ventures</div>
         <p>Senior leadership without a full-time hire: a partner embedded in your decisions, 12 months for portfolios and 6 months for ventures.</p>
         <div class="covers"><span class="tag">Assess where you stand</span><span class="tag">Advise where to go</span><span class="tag">Access what you need</span></div>
         <div class="val"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg><span>Better decisions, made faster, with a senior partner accountable alongside you.</span></div></div>
-      <div class="postit-card drift reveal"><div class="tape center"></div><div class="postit-num">02</div><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg></div>
+      <div class="postit-card gl drift reveal"><div class="tape center"></div><div class="postit-num">02</div><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg></div>
         <h3>Portfolio Infrastructure</h3><div class="tl">Structure, strategy & positioning</div>
         <p>For portfolio owners, family offices, and investment arms: where the portfolio stands, where it is going, how it is seen, and the business it runs on.</p>
         <div class="covers"><span class="tag">Situation assessment</span><span class="tag">Strategy & direction</span><span class="tag">Positioning</span><span class="tag">Business setup & AI</span></div>
         <div class="val"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg><span>A clear thesis, a structure to run on, and a profile that attracts the right partners.</span></div></div>
-      <div class="postit-card drift reveal"><div class="tape left"></div><div class="postit-num">03</div><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"></circle><circle cx="19" cy="5" r="2"></circle><circle cx="5" cy="19" r="2"></circle><path d="M10.4 21.9a10 10 0 0 0 9.941-15.416"></path><path d="M13.5 2.1a10 10 0 0 0-9.841 15.416"></path></svg></div>
+      <div class="postit-card gl drift reveal"><div class="tape left"></div><div class="postit-num">03</div><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"></circle><circle cx="19" cy="5" r="2"></circle><circle cx="5" cy="19" r="2"></circle><path d="M10.4 21.9a10 10 0 0 0 9.941-15.416"></path><path d="M13.5 2.1a10 10 0 0 0-9.841 15.416"></path></svg></div>
         <h3>Venture Innovation Hub</h3><div class="tl">Ecosystems that generate ventures</div>
         <p>Hubs, accelerators, and incubators that generate and enable ventures: designed, set up, and handed over.</p>
         <div class="covers"><span class="tag">Discovery & assessment</span><span class="tag">Program & economics design</span><span class="tag">Six ecosystem forces</span><span class="tag">AI hub co-pilot</span></div>
         <div class="val"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg><span>An owned innovation asset that compounds, and a pipeline of ventures into your portfolio.</span></div></div>
-      <div class="postit-card drift reveal"><div class="pin right"></div><div class="postit-num">04</div><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg></div>
+      <div class="postit-card gl drift reveal"><div class="pin right"></div><div class="postit-num">04</div><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg></div>
         <h3>Venture Building & Scaling</h3><div class="tl">Launch, rebalance & grow</div>
         <p>For new, struggling, and growing ventures: we build the infrastructure to launch, recover, or scale, sustainably and profitably.</p>
         <div class="covers"><span class="tag">Concept & validation</span><span class="tag">Context engineering</span><span class="tag">Brand, product & setup</span><span class="tag">Investment readiness</span></div>
@@ -478,14 +582,14 @@ body.hov #cur-r{width:56px;height:56px;border-color:var(--teal)}
 
     <div class="line-head reveal"><span class="line-badge">TVS</span><div><h3>The Venture School. <em>Education & mentorship.</em></h3><p>For every stakeholder of the ecosystem, so all its parts learn what they need and grow together, instead of in silos.</p></div></div>
     <div class="postit-wall" style="margin-bottom:0">
-      <div class="postit-card drift reveal"><div class="pin left"></div><div class="postit-num">05</div><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg></div>
+      <div class="postit-card gl drift reveal"><div class="pin left"></div><div class="postit-num">05</div><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg></div>
         <h3>Practical Education</h3><div class="tl">Programs, masterclasses & workshops</div>
         <p>Experience-driven education that turns knowledge into adaptable mindsets and actionable frameworks.</p>
         <div class="aud"><button class="on" data-a="0">B2C · Individuals</button><button data-a="1">B2B · Organizations</button></div>
         <p class="aud-t" data-t0="Open programs, masterclasses, and study groups for founders, investors, and professionals building a career in the ecosystem." data-t1="Programs designed for and delivered with enablers and corporates, for their teams, portfolios, or communities.">Open programs, masterclasses, and study groups for founders, investors, and professionals building a career in the ecosystem.</p>
         <div class="programs"><span><b>The Venture Asset Class</b> · flagship</span><span><b>Venture 360</b> · coming soon</span></div>
         <div class="val"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg><span>Aligned knowledge across the ecosystem, and real capability, not just theory.</span></div></div>
-      <div class="postit-card drift reveal"><div class="tape right"></div><div class="postit-num">06</div><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"></path><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path></svg></div>
+      <div class="postit-card gl drift reveal"><div class="tape right"></div><div class="postit-num">06</div><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"></path><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path></svg></div>
         <h3>Mentorship</h3><div class="tl">By ecosystem experts</div>
         <p>Personalized, output-oriented mentorship from experts with real operational and venture-building experience.</p>
         <div class="aud"><button class="on" data-a="0">B2C · Individuals</button><button data-a="1">B2B · Organizations</button></div>
@@ -498,17 +602,18 @@ body.hov #cur-r{width:56px;height:56px;border-color:var(--teal)}
 
 <!-- ═══ 5 · VALUE ═══ -->
 <section class="wall-section" id="s-value">
+  <div class="bgnum" aria-hidden="true">04</div>
   <div class="inner">
     <div class="s-label reveal">The Value We Build</div>
     <h2 class="ht reveal">Measured by what it <em>produces.</em></h2>
     <p class="sub reveal">Not by hours of advice. This is what every engagement is built to leave behind.</p>
     <div class="vwall">
-      <div class="vcard topline drift reveal"><div class="pin left"></div><span class="big">01</span><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"></path><circle cx="12" cy="12" r="10"></circle></svg></div><h3>Clear <em>direction</em></h3><p>A thesis and strategy set before anything is built. Every system traces back to it.</p></div>
-      <div class="vcard topline drift reveal"><div class="tape center"></div><span class="big">02</span><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="12" x="2" y="6" rx="6" ry="6"></rect><circle cx="16" cy="12" r="2"></circle></svg></div><h3>Systems that <em>run</em></h3><p>Built with your team, and operated with you until they perform.</p></div>
-      <div class="vcard topline drift reveal"><div class="pin right"></div><span class="big">03</span><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect x="2" y="16" width="6" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg></div><h3>Doors that <em>open</em></h3><p>Access to experts, partners, talent, and investors through our network.</p></div>
-      <div class="vcard topline drift reveal"><div class="tape left"></div><span class="big">04</span><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"></path><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle></svg></div><h3>Capability you <em>own</em></h3><p>Documented, onboarded, and handed over, so it stays with your team.</p></div>
-      <div class="vcard topline drift reveal"><div class="pin center"></div><span class="big">05</span><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg></div><h3>AI-ready <em>infrastructure</em></h3><p>Your context engineered into systems that automation and AI can run on.</p></div>
-      <div class="vcard topline drift reveal"><div class="tape right"></div><span class="big">06</span><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></div><h3>Growth that <em>compounds</em></h3><p>Aligned stakeholders, growing together instead of in silos.</p></div>
+      <div class="vcard gl topline drift reveal"><div class="pin left"></div><span class="big">01</span><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"></path><circle cx="12" cy="12" r="10"></circle></svg></div><h3>Clear <em>direction</em></h3><p>A thesis and strategy set before anything is built. Every system traces back to it.</p></div>
+      <div class="vcard gl topline drift reveal"><div class="tape center"></div><span class="big">02</span><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="12" x="2" y="6" rx="6" ry="6"></rect><circle cx="16" cy="12" r="2"></circle></svg></div><h3>Systems that <em>run</em></h3><p>Built with your team, and operated with you until they perform.</p></div>
+      <div class="vcard gl topline drift reveal"><div class="pin right"></div><span class="big">03</span><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect x="2" y="16" width="6" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg></div><h3>Doors that <em>open</em></h3><p>Access to experts, partners, talent, and investors through our network.</p></div>
+      <div class="vcard gl topline drift reveal"><div class="tape left"></div><span class="big">04</span><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"></path><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle></svg></div><h3>Capability you <em>own</em></h3><p>Documented, onboarded, and handed over, so it stays with your team.</p></div>
+      <div class="vcard gl topline drift reveal"><div class="pin center"></div><span class="big">05</span><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg></div><h3>AI-ready <em>infrastructure</em></h3><p>Your context engineered into systems that automation and AI can run on.</p></div>
+      <div class="vcard gl topline drift reveal"><div class="tape right"></div><span class="big">06</span><div class="postit-icon"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></div><h3>Growth that <em>compounds</em></h3><p>Aligned stakeholders, growing together instead of in silos.</p></div>
     </div>
   </div>
 </section>
@@ -516,30 +621,31 @@ body.hov #cur-r{width:56px;height:56px;border-color:var(--teal)}
 
 <!-- ═══ 6 · WHO WE SERVE ═══ -->
 <section class="wall-section" id="s-who">
+  <div class="bgnum" aria-hidden="true">05</div>
   <div class="inner">
     <div class="s-label reveal">Who We Serve</div>
     <h2 class="ht reveal">One ecosystem. <em>Every stakeholder.</em></h2>
     <p class="sub reveal">A healthy venture ecosystem needs all of its parts to grow together. Most relationships start with one service and grow into others.</p>
     <div class="who-cards-row row-3">
-      <div class="who-card topline drift reveal"><div class="pin left"></div>
+      <div class="who-card gl topline drift reveal"><div class="pin left"></div>
         <div class="who-card-header"><div class="who-card-avatar"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></div><div><span class="who-card-num">01 / 05</span><h4>Portfolio Owners & <em>Investors</em></h4></div></div>
         <div class="who-card-body"><p>Family offices, groups, VCs, and angels building portfolios around their expertise.</p><small>Where we fit</small>
           <div class="who-tags"><span class="tag">Fractional Leadership</span><span class="tag">Portfolio Infrastructure</span><span class="tag">Innovation Hub</span><span class="tag">Venture Building</span><span class="tag">Education</span><span class="tag">Mentorship</span></div></div></div>
-      <div class="who-card topline drift reveal"><div class="tape center"></div>
+      <div class="who-card gl topline drift reveal"><div class="tape center"></div>
         <div class="who-card-header"><div class="who-card-avatar"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg></div><div><span class="who-card-num">02 / 05</span><h4>Founders & <em>Ventures</em></h4></div></div>
         <div class="who-card-body"><p>New, struggling, or growing ventures that need structure to launch and scale.</p><small>Where we fit</small>
           <div class="who-tags"><span class="tag">Fractional Leadership</span><span class="tag">Venture Building</span><span class="tag">Education</span><span class="tag">Mentorship</span></div></div></div>
-      <div class="who-card topline drift reveal"><div class="pin right"></div>
+      <div class="who-card gl topline drift reveal"><div class="pin right"></div>
         <div class="who-card-header"><div class="who-card-avatar"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg></div><div><span class="who-card-num">03 / 05</span><h4>Venture <em>Studios</em></h4></div></div>
         <div class="who-card-body"><p>Studios running multiple ventures that need repeatable systems and talent.</p><small>Where we fit</small>
           <div class="who-tags"><span class="tag">Fractional Leadership</span><span class="tag">Portfolio Infrastructure</span><span class="tag">Venture Building</span><span class="tag">Education</span><span class="tag">Mentorship</span></div></div></div>
     </div>
     <div class="who-cards-row row-b">
-      <div class="who-card topline drift reveal"><div class="tape left"></div>
+      <div class="who-card gl topline drift reveal"><div class="tape left"></div>
         <div class="who-card-header"><div class="who-card-avatar"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M7 20h10"></path><path d="M10 20c5.5-2.5.8-6.4 3-10"></path><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"></path><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"></path></svg></div><div><span class="who-card-num">04 / 05</span><h4><em>Enablers</em></h4></div></div>
         <div class="who-card-body"><p>Accelerators, incubators, and hubs that support founders at scale.</p><small>Where we fit</small>
           <div class="who-tags"><span class="tag">Fractional Leadership</span><span class="tag">Innovation Hub</span><span class="tag">Education</span><span class="tag">Mentorship</span></div></div></div>
-      <div class="who-card topline drift reveal"><div class="pin center"></div>
+      <div class="who-card gl topline drift reveal"><div class="pin center"></div>
         <div class="who-card-header"><div class="who-card-avatar"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg></div><div><span class="who-card-num">05 / 05</span><h4>Corporates & <em>Institutions</em></h4></div></div>
         <div class="who-card-body"><p>Organizations embedding innovation and engaging with ventures.</p><small>Where we fit</small>
           <div class="who-tags"><span class="tag">Fractional Leadership</span><span class="tag">Innovation Hub</span><span class="tag">Venture Building</span><span class="tag">Education</span><span class="tag">Mentorship</span></div></div></div>
@@ -580,7 +686,7 @@ body.hov #cur-r{width:56px;height:56px;border-color:var(--teal)}
   <div class="foot-top">
     <div class="foot-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298.51 20.95"><path class="l3" d="M75.64,0h2.91l5.8,17.22h.06L90.21,0h2.91l-7.3,20.6h-2.88L75.64,0Z"/><path class="l3" d="M93.42,17.8v-9.03l2.83-2.83h7.68l2.83,2.83v5.36h-10.59v2.83l1.3,1.29h5.27l1.29-1.27v-1h2.71v1.82l-2.77,2.8h-7.74l-2.8-2.8ZM104.01,11.98v-2.38l-1.32-1.29h-5.21l-1.32,1.29v2.38h7.86Z"/><path class="l3" d="M110.43,5.94h2.62v2.88l2.88-2.88h4.59l2.88,2.88v11.77h-2.74v-10.95l-1.32-1.32h-2.8l-3.38,3.38v8.89h-2.74V5.94Z"/><path class="l3" d="M128.41,17.8v-9.51h-2.65v-2.35h2.71V1.18h2.68v4.77h4.56v2.38h-4.56v8.59l1.32,1.29h3.24v2.38h-4.47l-2.82-2.8Z"/><path class="l3" d="M138.5,17.78V5.94h2.74v10.98l1.32,1.29h2.74l3.41-3.41V5.94h2.74v14.66h-2.62v-2.91l-2.91,2.91h-4.59l-2.83-2.83Z"/><path class="l3" d="M155.57,5.94h2.62v2.56l2.53-2.56h3.91v2.38h-3.3l-3.03,3.06v9.21h-2.74V5.94Z"/><path class="l3" d="M166.11,17.8v-9.03l2.83-2.83h7.68l2.83,2.83v5.36h-10.59v2.83l1.3,1.29h5.27l1.3-1.27v-1h2.71v1.82l-2.77,2.8h-7.74l-2.8-2.8ZM176.7,11.98v-2.38l-1.32-1.29h-5.21l-1.32,1.29v2.38h7.86Z"/><path class="l3" d="M180.47,0h2.85l3.03,16.45h.09l4.65-16.45h2.44l4.53,16.45h.06l2.97-16.45h2.85l-4.18,20.6h-2.85l-4.56-16.45h-.09l-4.77,16.45h-2.85l-4.18-20.6Z"/><path class="l3" d="M205.42,17.8v-9.03l2.83-2.83h7.68l2.83,2.83v5.36h-10.59v2.83l1.3,1.29h5.27l1.3-1.27v-1h2.71v1.82l-2.77,2.8h-7.74l-2.8-2.8ZM216.02,11.98v-2.38l-1.32-1.29h-5.21l-1.32,1.29v2.38h7.86Z"/><path class="l3" d="M221.99,18.1v-3.62l2.5-2.5h7.71v-2.47l-1.3-1.27h-4.8l-1.27,1.27v1.09h-2.74v-1.8l2.85-2.85h7.09l2.85,2.85v11.8h-2.56v-2.41l-2.53,2.41h-5.33l-2.5-2.5ZM229.44,18.33l2.77-2.65v-1.53h-6.45l-1.03,1.03v2.15l1.03,1h3.68Z"/><path class="l3" d="M236.82,5.94h2.83l4.06,11.71h.12l4.03-11.71h2.83l-5.44,14.66h-2.94l-5.47-14.66Z"/><path class="l3" d="M252.45,17.8v-9.03l2.83-2.83h7.68l2.83,2.83v5.36h-10.59v2.83l1.3,1.29h5.27l1.3-1.27v-1h2.71v1.82l-2.77,2.8h-7.74l-2.8-2.8ZM263.05,11.98v-2.38l-1.32-1.29h-5.21l-1.32,1.29v2.38h7.86Z"/><path class="l3" d="M269.46,5.94h2.62v2.56l2.53-2.56h3.91v2.38h-3.3l-3.03,3.06v9.21h-2.74V5.94Z"/><path class="l3" d="M279.85,18.04v-1.82h2.74v1.09l1,.97h5.18l1-.97v-1.94l-1-1.03h-6.33l-2.47-2.47v-3.35l2.53-2.56h7.15l2.56,2.56v1.82h-2.74v-1.09l-1-.97h-4.77l-1,.97v1.82l1,1.03h6.27l2.53,2.53v3.41l-2.53,2.56h-7.56l-2.56-2.56Z"/><path class="l3" d="M294.95,19.6v-1.47l1-1h1.56l1,1v1.47l-1,1h-1.56l-1-1Z"/><path class="l2" d="M36.65,20.95c-.14,0-.28,0-.43-.01-.12,0-.25-.02-.37-.03-2.22-.27-4.09-1.81-4.94-3.88l-4.71-11.41c-.42-1.02-1.34-1.79-2.43-1.91-.1-.01-.19-.02-.29-.02,0,0-.02,0-.03,0-1.01,0-1.96.47-2.55,1.28l-1.79,2.45c-.5.68-1.44.93-2.16.5-.83-.49-1.04-1.58-.49-2.34l1.83-2.5c1.22-1.67,3.19-2.64,5.24-2.61.13,0,.26,0,.39.02,2.34.18,4.35,1.76,5.24,3.94l4.7,11.38c.42,1.03,1.36,1.81,2.47,1.92.09,0,.19.01.28.02.93,0,1.81-.43,2.43-1.13l2.46-2.76c.56-.63,1.52-.78,2.2-.29.78.57.88,1.67.26,2.38l-2.58,2.9c-1.22,1.37-2.92,2.13-4.74,2.13Z"/><path class="l1" d="M20.49,20.95c-.14,0-.28,0-.43-.01-.12,0-.25-.02-.37-.03-2.22-.27-4.09-1.81-4.94-3.88l-4.71-11.41c-.42-1.02-1.34-1.79-2.43-1.91-.1-.01-.19-.02-.29-.02,0,0-.02,0-.03,0-1.01,0-1.96.47-2.55,1.28l-1.79,2.45c-.5.68-1.44.93-2.16.5-.83-.49-1.04-1.58-.49-2.34l1.83-2.5C3.35,1.4,5.33.43,7.38.46c.13,0,.26,0,.39.02,2.34.18,4.35,1.76,5.24,3.94l4.7,11.38c.42,1.03,1.36,1.81,2.47,1.92.09,0,.19.01.28.02.93,0,1.81-.43,2.43-1.13l2.46-2.76c.56-.63,1.52-.78,2.2-.29.78.57.88,1.67.26,2.38l-2.58,2.9c-1.22,1.37-2.92,2.13-4.74,2.13Z"/><path class="l2" d="M50.16,15.81c.39.94,1.2,1.68,2.2,1.86.18.03.36.05.54.05.93,0,1.81-.43,2.43-1.13l2.47-2.78,1.42-1.79s.02-.03.04-.04c2.28-2.68,2.42-5.23.39-7.02-1.73-1.52-4.73-2.01-6.29-.29-.02.03-.04.06-.07.09l-1.8,2.47c-.5.68-1.44.93-2.16.5-.83-.49-1.04-1.58-.49-2.34l1.83-2.5c.08-.11.17-.24.3-.37,2.85-3.15,7.89-2.53,10.81.03,2.57,2.26,4.1,6.62-.04,11.51l-1.43,1.81-.06.07-2.58,2.9c-1.22,1.37-2.92,2.13-4.74,2.13-.14,0-.28,0-.43-.01-.12,0-.25-.02-.37-.03-2.22-.27-4.09-1.81-4.94-3.87-1.12-2.72-3.94-9.54-4.76-11.54-.26-.62-.7-1.16-1.3-1.47-.42-.21-.88-.33-1.37-.34-1.03-.03-1.97.45-2.58,1.28l-1.79,2.45c-.5.68-1.44.93-2.16.5-.83-.49-1.04-1.58-.49-2.34l1.74-2.39c.91-1.25,2.21-2.18,3.71-2.54.67-.16,1.34-.21,2-.16,2.34.18,4.35,1.76,5.25,3.94l4.71,11.4Z"/></svg></div>
     <div class="foot-links"><a href="#s-about">About</a><a href="#s-services">Services</a><a href="#s-who">Who We Serve</a><a href="#s-join">Get Started</a></div>
-    <div class="foot-social"><a href="mailto:info@ventureweavers.com">Email</a><a href="https://www.linkedin.com/company/ventureweavers" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/ventureweavers/" target="_blank" rel="noopener">Instagram</a></div>
+    <div class="foot-social"><a class="ico" href="https://www.linkedin.com/company/ventureweavers" target="_blank" rel="noopener" aria-label="LinkedIn"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a class="ico" href="https://www.instagram.com/ventureweavers/" target="_blank" rel="noopener" aria-label="Instagram"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a><a class="ico" href="mailto:info@ventureweavers.com" aria-label="Email"><svg stroke="currentColor" fill="none" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></a></div>
   </div>
   <div class="foot-bottom"><span>© 2026 VentureWeavers</span><span>Venture-as-a-Service · The Venture School</span><span>Cairo · MENA</span></div>
 </footer>
@@ -607,23 +713,85 @@ document.querySelectorAll('.mob-menu a').forEach(a=>a.addEventListener('click',(
 
 function startSite(){
   document.getElementById('topbar').classList.add('vis');
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const el=e.target;const sib=[...el.parentNode.children].filter(c=>c.classList.contains('reveal'));const k=Math.max(0,sib.indexOf(el))%3;setTimeout(()=>el.classList.add('done'),k*90);io.unobserve(el)}}),{threshold:.12});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const el=e.target;const sib=[...el.parentNode.children].filter(c=>c.classList.contains('reveal'));const k=Math.max(0,sib.indexOf(el))%3;setTimeout(()=>el.classList.add('done'),k*110);io.unobserve(el)}}),{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  // approach: show typical advisory first, then our way
-  const bots=document.getElementById('bots');
-  new IntersectionObserver((e,o)=>{if(e[0].isIntersecting&&!RM){o.disconnect();if(!touched){setMode('adv');setTimeout(()=>{if(!touched)setMode('vw')},2800)}}},{threshold:.5}).observe(bots);
+  document.querySelectorAll('[data-count]').forEach(n=>{new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){o.disconnect();if(RM)return;const to=+n.dataset.count,t0=performance.now();const f=t=>{const p=Math.min(1,(t-t0)/1200);n.textContent=Math.round((1-Math.pow(1-p,3))*to);if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)}}).observe(n)});
 }
 
-/* approach toggle */
-const ADV=[['Brief','You explain the challenge.'],['Advice','Recommendations are made.'],['Report','A deck is delivered.'],['After','Execution is left to you.']];
-const bcards=[...document.querySelectorAll('.bcard')];const VW=bcards.map(c=>[c.querySelector('h3').textContent,c.querySelector('p').textContent]);
-const appr=document.getElementById('s-approach');let touched=false;
-function setMode(m){document.querySelectorAll('#switch button').forEach(b=>b.classList.toggle('on',b.dataset.m===m));appr.classList.toggle('adv',m==='adv');
-  const d=m==='adv'?ADV:VW;bcards.forEach((c,i)=>{const tx=c.querySelector('.tx');tx.classList.add('out');setTimeout(()=>{c.querySelector('h3').textContent=d[i][0];c.querySelector('p').textContent=d[i][1];tx.classList.remove('out')},250+i*70)})}
-document.querySelectorAll('#switch button').forEach(b=>b.addEventListener('click',()=>{touched=true;setMode(b.dataset.m)}));
+/* word-split headings (rise) + scroll-fill (about) */
+function splitWords(el,cls){let i=0;const walk=n=>[...n.childNodes].forEach(c=>{if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(p=>{if(!p)return;if(/^\s+$/.test(p)){f.appendChild(document.createTextNode(' '));return}
+  if(cls==='w'){const w=document.createElement('span');w.className='w';const s=document.createElement('span');s.textContent=p;s.style.setProperty('--i',i++);w.appendChild(s);f.appendChild(w)}else{const s=document.createElement('span');s.className='wd';s.textContent=p;f.appendChild(s)}});c.replaceWith(f)}else if(c.nodeType===1&&c.tagName!=='BR')walk(c)});walk(el)}
+document.querySelectorAll('.ht,.join-ht').forEach(h=>splitWords(h,'w'));
+document.querySelectorAll('.fill').forEach(h=>splitWords(h,'wd'));
+const fillWords=[...document.querySelectorAll('.fill .wd')];
+/* cards land like pinned notes */
+document.querySelectorAll('.reveal').forEach((el,i)=>{if(el.matches('.card,.c-manifesto,.c-stat,.illus-card,.postit-card,.vcard,.who-card,.bcard,.bdetail,.aaa-band')){el.classList.add('drop');if(i%2)el.classList.add('alt')}});
+
+/* interactive card glow (mouse + touch) */
+document.querySelectorAll('.gl').forEach(c=>{const pos=(x,y)=>{const r=c.getBoundingClientRect();c.style.setProperty('--cx',(x-r.left)+'px');c.style.setProperty('--cy',(y-r.top)+'px')};
+  c.addEventListener('pointermove',e=>pos(e.clientX,e.clientY));
+  c.addEventListener('touchstart',e=>{const t=e.touches[0];pos(t.clientX,t.clientY);c.classList.add('touch');clearTimeout(c._t);c._t=setTimeout(()=>c.classList.remove('touch'),1100)},{passive:true})});
+
+/* hero diagram: service dots along each line */
+(function(){const svg=document.getElementById('linesSvg'),NS='http://www.w3.org/2000/svg';
+  const A=document.getElementById('pA'),B=document.getElementById('pB');
+  const add=(p,fr,cls,name,k)=>{const L=p.getTotalLength(),pt=p.getPointAtLength(L*fr);const c=document.createElementNS(NS,'circle');c.setAttribute('cx',pt.x.toFixed(1));c.setAttribute('cy',pt.y.toFixed(1));c.setAttribute('r',3.2);c.setAttribute('class','sd '+cls);c.style.setProperty('--d',(k*.35)+'s');const t=document.createElementNS(NS,'title');t.textContent=name;c.appendChild(t);svg.querySelector(cls==='a'?'.grp-a':'.grp-b').appendChild(c)};
+  ['Fractional Leadership','Portfolio Infrastructure','Venture Innovation Hub','Venture Building & Scaling'].forEach((n,i)=>add(A,[.2,.42,.62,.8][i],'a',n,i));
+  ['Practical Education','Mentorship'].forEach((n,i)=>add(B,[.32,.66][i],'b',n,i+1));
+  document.querySelectorAll('#lines2 div').forEach(d=>{d.addEventListener('mouseenter',()=>svg.classList.add('hl-'+d.dataset.g));d.addEventListener('mouseleave',()=>svg.classList.remove('hl-'+d.dataset.g))});
+})();
+
+/* approach: interactive steps (VentureWeavers way first, no auto switching) */
+const VWD=[['Build','Strategy, systems, and assets, built with your team.','We set the direction, then build it with you.',['Strategy and direction set before anything is built','Systems, assets, and processes built with your team','Your team involved at every step'],'A foundation your venture or portfolio can run on.'],
+ ['Operate','We run it with you, until it performs.','We run it alongside you, until it performs.',['Operated side by side with your team','Measured against clear KPIs','Refined as real results come in'],'Systems that perform, not slides.'],
+ ['Transfer','Documented and handed over, so the capability is yours.','The capability becomes yours.',['Documented end to end','Your team onboarded and trained','Ownership handed over'],'Capability your team owns.'],
+ ['Support','We stay on, as your needs evolve.','We stay on as your needs evolve.',['Ongoing fractional leadership: Assess, Advise, Access','Access to our network and services','Ready for what comes next'],'A long-term partner, not a one-off report.']];
+const ADVD=[['Brief','You explain the challenge.','You explain the challenge.',['A few discovery meetings','A limited view of your context','No one embedded in your team'],'A problem statement.'],
+ ['Advice','Recommendations are made.','Recommendations are made from the outside.',['Frameworks and best practices','Built away from your team','Execution not included'],'A list of recommendations.'],
+ ['Report','A deck is delivered.','A deck is delivered, and the engagement ends.',['Findings presented','Engagement wraps up','Implementation is on you'],'A report.'],
+ ['After','Execution is left to you.','Execution is left to you.',['No one stays to execute','No capability transferred','No ongoing support'],'Nothing that runs.']];
+const bcards=[...document.querySelectorAll('.bcard')],appr=document.getElementById('s-approach'),tline=document.getElementById('tline'),tdots=[...tline.querySelectorAll('b')];
+let mode='vw',act=0;
+const data=()=>mode==='adv'?ADVD:VWD;
+const bdetail=document.getElementById('bdetail'),botsEl=document.getElementById('bots');
+function placeDetail(){if(innerWidth<=768)bcards[act].after(bdetail);else botsEl.after(bdetail)}
+addEventListener('resize',placeDetail);
+function showStep(i){act=i;placeDetail();const d=data()[i];bcards.forEach((c,j)=>c.classList.toggle('act',j===i));tdots.forEach((b,j)=>b.classList.toggle('on',j<=i));
+  const ins=document.querySelectorAll('#bdetail .bd-in');ins.forEach(x=>x.style.opacity=0);
+  setTimeout(()=>{document.getElementById('bdLbl').textContent=`Step 0${i+1} · ${d[0]}`;document.getElementById('bdH').textContent=d[2];
+    document.getElementById('bdUl').innerHTML=d[3].map((t,k)=>`<li style="--i:${k}">${t}</li>`).join('');
+    document.getElementById('bdOs').textContent=mode==='adv'?'What you are left with':'What you get';document.getElementById('bdO').textContent=d[4];ins.forEach(x=>x.style.opacity=1)},200)}
+function setMode(m){if(m===mode)return;mode=m;document.querySelectorAll('#switch button').forEach(b=>b.classList.toggle('on',b.dataset.m===m));appr.classList.toggle('adv',m==='adv');
+  const d=data();bcards.forEach((c,i)=>{const tx=c.querySelector('.tx');tx.classList.add('out');setTimeout(()=>{c.querySelector('h3').textContent=d[i][0];c.querySelector('p').textContent=d[i][1];tx.classList.remove('out')},250+i*70)});
+  showStep(act)}
+document.querySelectorAll('#switch button').forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.m)));
+bcards.forEach((c,i)=>{c.addEventListener('click',()=>showStep(i));c.addEventListener('mouseenter',()=>{if(matchMedia('(pointer:fine)').matches)showStep(i)})});
+showStep(0);
 
 /* B2C / B2B */
 document.querySelectorAll('.aud').forEach(box=>{const t=box.nextElementSibling;box.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{box.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));t.style.opacity=0;setTimeout(()=>{t.textContent=t.dataset['t'+b.dataset.a];t.style.opacity=1},220)}))});
+
+/* scroll effects: progress, parallax, section numbers, text fill, approach track */
+(function(){const pbar=document.getElementById('pbar'),nums=[...document.querySelectorAll('.bgnum')],ss=document.querySelector('.side-stack'),hc=document.querySelector('.hero-card'),bots=document.getElementById('bots');let tick=false;
+  function upd(){tick=false;const y=scrollY,H=innerHeight;
+    pbar.style.transform=`scaleX(${Math.min(1,y/(document.documentElement.scrollHeight-H))})`;
+    fillWords.forEach(w=>{const r=w.getBoundingClientRect();w.classList.toggle('on',RM||r.top<H*.75)});
+    if(RM)return;
+    nums.forEach(n=>{const r=n.parentNode.getBoundingClientRect();n.style.transform=`translateY(${r.top*-.25}px)`});
+    if(y<H*1.3&&innerWidth>900){ss.style.transform=`translateY(${y*-.12}px)`;hc.style.transform=`translateY(${y*.05}px)`}
+    const br=bots.getBoundingClientRect();tline.style.setProperty('--tp',Math.max(0,Math.min(1,(H*.85-br.top)/(H*.45))));
+  }
+  addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});addEventListener('resize',upd);upd();
+})();
+
+/* logo spotlight: follows the mouse on desktop; drifts and follows touch on mobile (faded) */
+(function(){const spot=document.getElementById('spot');const fine=matchMedia('(pointer:fine)').matches&&innerWidth>768;spot.classList.add('on');if(!fine)spot.style.setProperty('--sr','200px');
+  let sx=innerWidth/2,sy=innerHeight/2,tx=sx,ty=sy,last=0;
+  addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY;last=performance.now()},{passive:true});
+  addEventListener('touchmove',e=>{const t=e.touches[0];if(t){tx=t.clientX;ty=t.clientY;last=performance.now()}},{passive:true});
+  (function f(t){if(!fine&&performance.now()-last>2500&&!RM){tx=innerWidth*(.5+.38*Math.sin(t*.00023));ty=innerHeight*(.5+.34*Math.sin(t*.00031+1.3))}
+    sx+=(tx-sx)*(fine?.35:.04);sy+=(ty-sy)*(fine?.35:.04);spot.style.setProperty('--mx',sx+'px');spot.style.setProperty('--my',sy+'px');requestAnimationFrame(f)})(0);
+})();
 
 /* active nav */
 const navA=[...document.querySelectorAll('.tb-right a')];
